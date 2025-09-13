@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cortexa Labs — Full-Stack Web, Mobile & Backend</title>
+  <meta name="description" content="We design & ship robust products: modern web, mobile apps and reliable backends." />
+  <link rel="icon" href="logo.svg">
+
+  <!-- SEO / Open Graph -->
+  <meta name="title" content="Cortexa Labs — Full-Stack Web, Mobile & Backend">
+  <link rel="canonical" href="https://cortexaai.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cortexaai.net/">
+  <meta property="og:title" content="Cortexa Labs — Full-Stack Web, Mobile & Backend">
+  <meta property="og:description" content="We design & ship robust products: modern web, mobile apps and reliable backends.">
+  <meta property="og:image" content="https://cortexaai.net/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cortexa Labs — Full-Stack Web, Mobile & Backend">
+  <meta name="twitter:description" content="We design & ship robust products: modern web, mobile apps and reliable backends.">
+  <meta name="twitter:image" content="https://cortexaai.net/og-cover.png">
+
+  <!-- Security: basic CSP (gerekirse domainlerini ekle) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' https: data:; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://plausible.io;">
+
+  <!-- Analytics (opsiyonel) -->
+  <script defer data-domain="cortexaai.net" src="https://plausible.io/js/script.js"></script>
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Cortexa Labs",
+    "url":"https://cortexaai.net/",
+    "logo":"https://cortexaai.net/logo.svg",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"sales",
+      "email":"hello@cortexaai.net",
+      "areaServed":"Worldwide"
+    }]
+  }
+  </script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0b0f1a">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <noscript><div class="noscript">For the best experience, enable JavaScript.</div></noscript>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span>Cortexa Labs</span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Primary">
+        <a id="navMetrics" href="#metrics">Metrics</a>
+        <a id="navClients" href="#clients">Clients</a>
+        <a id="navProjects" href="#projects">Projects</a>
+        <a id="navStack" href="#stack">Tech Stack</a>
+        <a id="navPricing" href="#pricing">Pricing</a>
+        <a id="navFAQ" href="#faq">FAQ</a>
+        <a id="navContact" href="#contact" class="btn btn-primary">Get in touch</a>
+      </nav>
+
+      <!-- Language + Accent palette -->
+      <div class="lang-toggle" aria-label="Language & Colors">
+        <button id="langEN" class="btn-ghost" aria-pressed="true">EN</button>
+        <span class="sep">|</span>
+        <button id="langTR" class="btn-ghost" aria-pressed="false">TR</button>
+        <span class="sep">|</span>
+        <div class="palette" title="Accent color">
+          <button class="swatch" data-color="#ffffff" title="White"></button>
+          <button class="swatch" data-color="#22d3ee" title="Cyan"></button>
+          <button class="swatch" data-color="#6366f1" title="Indigo"></button>
+          <button class="swatch" data-color="#34d399" title="Green"></button>
+          <button class="swatch" data-color="#f59e0b" title="Amber"></button>
+        </div>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" role="region" aria-label="Hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="kicker" id="heroKicker">Design • Build • Launch</p>
+        <h1>
+          <span id="heroTitlePrefix">Full-Stack</span>
+          <span class="gradient" id="heroTitleGradient">Web</span>,
+          <span id="heroTitleSuffix">Mobile &amp; Backend</span>
+        </h1>
+        <p class="lead" id="heroLead">
+          We’re a growing product team delivering end-to-end software — modern websites, iOS/Android apps, and reliable backends with clean APIs.
+        </p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary" id="heroCTA1">Start a Project</a>
+          <a href="#projects" class="btn btn-ghost" id="heroCTA2">See Projects</a>
+        </div>
+        <p class="micro">Accessible UX • Clean code • CI/CD • Cloud-ready</p>
+      </div>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="screen">
+          <div class="tiles">
+            <div></div><div></div><div></div>
+            <div></div><div class="pulse"></div><div></div>
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="meta">
+          <span>Project Showcase</span>
+          <span>Fast &lt; Reliable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section id="metrics" class="section alt" role="region" aria-label="Key metrics">
+    <div class="container">
+      <h2 class="section-title" id="titleMetrics">Proof we deliver</h2>
+      <div id="metricsGrid" class="cards four"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section" role="region" aria-label="Services">
+    <div class="container">
+      <h2 class="section-title" id="titleServices">What we do</h2>
+      <p class="section-sub" id="subServices">Product delivery end-to-end: web, mobile, backend, and cloud.</p>
+      <div class="cards four">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🧩</div>
+          <h3 id="svcWebTitle">Web Platforms</h3>
+          <p id="svcWebDesc">Modern, responsive sites and dashboards with accessible UX.</p>
+          <ul>
+            <li>HTML • CSS • JavaScript</li>
+            <li id="svcWebLi2">Dashboards, portals, admin panels</li>
+            <li id="svcWebLi3">SSR or static builds</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">📱</div>
+          <h3 id="svcMobTitle">Mobile Apps</h3>
+          <p id="svcMobDesc">Native iOS &amp; Android with secure auth and offline-first data.</p>
+          <ul>
+            <li>Swift (iOS) • Kotlin (Android)</li>
+            <li id="svcMobLi2">Push notifications &amp; analytics</li>
+            <li id="svcMobLi3">Store publishing &amp; crash reports</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">🛠️</div>
+          <h3 id="svcBackTitle">Backend &amp; APIs</h3>
+          <p id="svcBackDesc">Clean architecture, observability, and robust integrations.</p>
+          <ul>
+            <li>REST / GraphQL / WebSockets</li>
+            <li>PostgreSQL • Redis • S3</li>
+            <li id="svcBackLi3">Auth, roles, audit logs</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">☁️</div>
+          <h3 id="svcCloudTitle">Cloud &amp; DevOps</h3>
+          <p id="svcCloudDesc">CI/CD, environments, monitoring, and cost/reliability baselines.</p>
+          <ul>
+            <li>Vercel / AWS / GCP</li>
+            <li>Docker • Preview apps</li>
+            <li id="svcCloudLi3">Metrics &amp; alerts</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section id="clients" class="section" role="region" aria-label="Clients">
+    <div class="container">
+      <h2 class="section-title" id="titleClients">Clients</h2>
+      <div id="clientsGrid" class="logos"></div>
+    </div>
+  </section>
+
+  <!-- Projects + Filter -->
+  <section id="projects" class="section alt" role="region" aria-label="Projects">
+    <div class="container">
+      <h2 class="section-title" id="titleProjects">Selected Projects</h2>
+
+      <div class="filterbar" id="projFilter" role="group" aria-label="Filter projects">
+        <button class="chip is-active" data-tag="all">All</button>
+        <button class="chip" data-tag="HTML/CSS/JS">HTML/CSS/JS</button>
+        <button class="chip" data-tag="Node">Node</button>
+        <button class="chip" data-tag="Postgres">Postgres</button>
+        <button class="chip" data-tag="Swift">Swift</button>
+        <button class="chip" data-tag="Kotlin">Kotlin</button>
+      </div>
+
+      <div id="projectsGrid" class="proj-grid"></div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="stack" class="section" role="region" aria-label="Tech Stack">
+    <div class="container">
+      <h2 class="section-title" id="titleStack">Tech we use</h2>
+      <p class="section-sub" id="subStack">Modern, proven, maintainable — without vendor lock-in.</p>
+      <div id="stackGrid" class="stack-grid"></div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section alt" role="region" aria-label="Engagement Models">
+    <div class="container">
+      <h2 class="section-title" id="titlePricing">Engagement Models</h2>
+      <div id="pricingGrid" class="cards three"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section" role="region" aria-label="Testimonials">
+    <div class="container">
+      <h2 class="section-title" id="titleTestimonials">What partners say</h2>
+      <div id="testimonialsGrid" class="cards two"></div>
+    </div>
+  </section>
+
+  <!-- Blog / Updates -->
+  <section id="blog" class="section" role="region" aria-label="Blog">
+    <div class="container">
+      <h2 class="section-title" id="titleBlog">Blog &amp; Updates</h2>
+      <div id="blogGrid" class="proj-grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section alt" role="region" aria-label="FAQ">
+    <div class="container">
+      <h2 class="section-title" id="titleFAQ">FAQ</h2>
+      <div id="faqList" class="cards two"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section cta" role="region" aria-label="Contact">
+    <div class="container">
+      <div class="form-card">
+        <header class="form-head">
+          <h2 class="section-title" id="titleContact">Let’s build together</h2>
+          <p class="section-sub" id="subContact">Tell us about your web, mobile, or backend needs. We’ll reply fast.</p>
+        </header>
+
+        <!-- Formspree: replace YOUR_FORM_ID -->
+        <form id="contactForm" class="contact-form form-grid" action="https://formspree.io/f/mzzawopj" method="POST" novalidate>
+          <div class="form-row">
+            <label class="vh" for="inputName">Name</label>
+            <input class="input-decor" type="text" name="name" id="inputName" placeholder="Your name" required />
+            <small class="input-help" id="errName"></small>
+          </div>
+
+          <div class="form-row">
+            <label class="vh" for="inputEmail">Email</label>
+            <input class="input-decor" type="email" name="email" id="inputEmail" placeholder="Email" required />
+            <small class="input-help" id="errEmail"></small>
+          </div>
+
+          <div class="form-row span-2">
+            <label class="vh" for="inputCompany">Company</label>
+            <input class="input-decor" type="text" name="company" id="inputCompany" placeholder="Company (optional)" />
+            <small class="input-help" id="errCompany"></small>
+          </div>
+
+          <div class="form-row span-2">
+            <label class="vh" for="inputMessage">Message</label>
+            <textarea class="input-decor" name="message" id="inputMessage" rows="4" placeholder="Your project / idea" required></textarea>
+            <small class="input-help" id="errMessage"></small>
+          </div>
+
+          <!-- Honeypot + timestamp -->
+          <input type="text" name="_hp" id="hp" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_ts" id="ts">
+
+          <div class="form-actions span-2">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnSend">
+              <span class="btn-label">Send</span><span class="btn-dots" aria-hidden="true">…</span>
+            </button>
+            <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <p class="micro contact-alt center">
+          Email: <a id="contactEmail" href="#">—</a> • <span id="locationTxt"></span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <span>© <span id="year"></span> Cortexa Labs</span>
+      </div>
+      <div class="foot-links">
+        <a id="footMetrics" href="#metrics">Metrics</a>
+        <a id="footClients" href="#clients">Clients</a>
+        <a id="footProjects" href="#projects">Projects</a>
+        <a id="footStack" href="#stack">Tech Stack</a>
+        <a id="footPricing" href="#pricing">Pricing</a>
+        <a id="footFAQ" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- IMPORTANT: data.js mutlaka script.js'ten ÖNCE yüklenmeli -->
+  <script src="data.js"></script>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+
+  <!-- PWA service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', ()=> navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+    }
+  </script>
+</body>
+</html>
