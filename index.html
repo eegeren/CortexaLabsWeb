@@ -324,17 +324,19 @@
     </div>
   </footer>
 
-  <!-- IMPORTANT: data.js mutlaka script.js'ten ÖNCE yüklenmeli -->
-  <script src="data.js"></script>
+ 
+    <script src="./data.js"></script>
 
-  <!-- Main script -->
-  <script src="script.js" defer></script>
+    <!-- Main script -->
+    <script src="./script.js" defer></script>
 
-  <!-- PWA service worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', ()=> navigator.serviceWorker.register('/sw.js').catch(()=>{}));
-    }
-  </script>
-</body>
+    <!-- PWA service worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
 </html>
