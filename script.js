@@ -32,14 +32,6 @@ const D = {
     location:  "Bursa, Türkiye • Uzaktan öncelikli"
   },
 
-  // Son 18 ay verileri baz alınarak düzenlendi
-  metrics: [
-    { k: "18",  v: "Aktif müşteri" },
-    { k: "41",  v: "Tamamlanan proje" },
-    { k: "9",   v: "Çekirdek ekip" },
-    { k: "6–9", v: "Ortalama teslim (hafta)" }
-  ],
-
   clients: [
     { name: "Anadolu Perakende Grubu",  note: "E-ticaret ve sipariş yönetim paneli" },
     { name: "Boğaziçi Lojistik",        note: "Kurye takip mobil uygulaması" },
@@ -203,9 +195,9 @@ const D = {
 /* ======== /REAL(ISTIC) DATA ======== */
 
 const TALL = {
-  en:{ nav:{metrics:"Metrics",clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
+  en:{ nav:{clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
        hero:{kicker:"Design • Build • Launch",titlePrefix:"Digital solutions",titleGradient:"for",titleSuffix:"local businesses",lead:"We help cafes and neighborhood retailers launch fast websites, mobile apps, QR menus, and POS integrations with one dedicated team.",cta1:"Request a Quote",cta2:"View Projects"},
-       sections:{metrics:"Proof we deliver",servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
+       sections:{servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
        services:{
          mobileTitle:"Mobile Apps",
          mobileDesc:"iOS & Android apps that keep local customers coming back.",
@@ -242,9 +234,9 @@ const TALL = {
        pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}],
        blogRead:"Read"
      },
-  tr:{ nav:{metrics:"Metrikler",clients:"Müşteriler",projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
+  tr:{ nav:{clients:"Müşteriler",projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
        hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Yerel işletmelere",titleGradient:"özel",titleSuffix:"dijital çözümler",lead:"Bursa ve çevresindeki kafe, restoran ve işletmeler için web sitesi, mobil uygulama, QR menü ve POS yazılımlarını tek ekipten sunuyoruz.",cta1:"Teklif Alın",cta2:"Projelerimizi Görün"},
-       sections:{metrics:"Teslim gücümüz",servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
+       sections:{servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
        services:{
          mobileTitle:"Mobil Uygulama",
          mobileDesc:"Mahallenizdeki müşterilere doğrudan ulaşan iOS & Android uygulamaları.",
@@ -291,14 +283,6 @@ let LANG = LS.get(LANG_KEY,'tr');
 })();
 
 /* renderers */
-function renderMetrics(){
-  const el=$('metricsGrid'); if(!el) return;
-  el.innerHTML=D.metrics.map(m=>`
-    <div class="card center reveal">
-      <div class="big" style="font-size:28px;font-weight:700">${esc(m.k)}</div>
-      <div class="muted" style="color:var(--muted)">${esc(m.v)}</div>
-    </div>`).join('');
-}
 function renderClients(){
   const el=$('clientsGrid'); if(!el) return;
   el.innerHTML=D.clients.map(c=>`
@@ -383,9 +367,9 @@ function applyI18n(lang){
   const TL=TALL[lang]||TALL.en;
   // nav & footer
   const map = [
-    ['navMetrics','metrics'],['navClients','clients'],['navProjects','projects'],
-    ['navStack','stack'],['navPricing','pricing'],['navFAQ','faq'],['navContact','contact'],
-    ['footMetrics','metrics'],['footClients','clients'],['footProjects','projects'],
+    ['navClients','clients'],['navProjects','projects'],['navStack','stack'],
+    ['navPricing','pricing'],['navFAQ','faq'],['navContact','contact'],
+    ['footClients','clients'],['footProjects','projects'],
     ['footStack','stack'],['footPricing','pricing'],['footFAQ','faq']
   ];
   map.forEach(([id,k])=>{ const el=$(id); if(el) el.textContent = TL.nav[k]; });
@@ -400,7 +384,6 @@ function applyI18n(lang){
   $('heroCTA2').textContent=TL.hero.cta2;
 
   // sections
-  $('titleMetrics').textContent=TL.sections.metrics;
   $('titleServices').textContent=TL.sections.servicesTitle;
   $('subServices').textContent=TL.sections.servicesSub;
   $('titleClients').textContent=TL.sections.clients;
@@ -433,7 +416,7 @@ function applyI18n(lang){
 
 /* initial render + reveal */
 function initialRender(){
-  renderMetrics(); renderClients(); renderProjects(LS.get(FILTER_KEY,'all'));
+  renderClients(); renderProjects(LS.get(FILTER_KEY,'all'));
   renderStack(); renderPricing(LANG); renderTestimonials(); renderBlog(); renderFAQ();
 
   const io=new IntersectionObserver(entries=>{
