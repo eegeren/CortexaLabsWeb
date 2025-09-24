@@ -38,67 +38,57 @@ const D = {
 
   projects: [
     {
-      title: "Çok Kiracılı B2B Yönetim Paneli",
-      desc: "Rol bazlı yetki, denetim kayıtları, kiracı izolasyonu ve kullanım raporları.",
-      tags: ["HTML/CSS/JS", "Node", "Postgres"]
+      title: "Kahve Durağı QR Menü Platformu",
+      desc: "Her masa için benzersiz QR, fotoğraflı menü yönetimi ve günlük kampanya duyuruları.",
+      tags: ["QR", "Next.js", "Supabase"]
     },
     {
-      title: "Bayi Ödeme ve Mutabakat Portalı",
-      desc: "KYC/KYB süreçleri, ödeme mutabakatı, itiraz yönetimi ve dışa aktarımlar.",
-      tags: ["Vanilla JS", "REST API", "S3"]
+      title: "Bursa Kebap Evi Web Sitesi",
+      desc: "SEO uyumlu vitrin, rezervasyon & paket servis formları, Google Business senkronizasyonu.",
+      tags: ["SEO", "Form", "Analytics"]
     },
     {
-      title: "Gerçek Zamanlı Kurye Uygulaması",
-      desc: "Anlık konum, push bildirimleri, offline kuyruk senkronizasyonu.",
-      tags: ["Swift", "Kotlin", "JWT"]
+      title: "Meyra Pastaneleri POS Entegrasyonu",
+      desc: "Stok-satış raporları, Yemeksepeti/Getir entegrasyonları ve günlük kasa kapanışı otomasyonu.",
+      tags: ["POS", "API", "Raporlama"]
     },
     {
-      title: "Tur & Konaklama Rezervasyon Motoru",
-      desc: "Stok yönetimi, takvim bazlı fiyatlama, kupon ve fatura üretimi.",
-      tags: ["JS", "WebSockets", "Redis"]
-    },
-    {
-      title: "Sağlık Hasta Portalı",
-      desc: "Randevular, laboratuvar sonuçları ve güvenli mesajlaşma.",
-      tags: ["HTML/CSS/JS", "FastAPI", "Postgres"]
-    },
-    {
-      title: "Perakende Operasyon Paneli",
-      desc: "Stok senkronizasyonu, sipariş durumları, SLA metrikleri ve uyarılar.",
-      tags: ["Node", "Postgres", "S3"]
+      title: "Granola Cafe Sadakat Uygulaması",
+      desc: "iOS/Android uygulamasıyla puan toplama, push kampanyaları ve teslimat takibi.",
+      tags: ["Mobil", "Push", "Firebase"]
     }
   ],
 
   stack: [
     {
       area: "Önyüz",
-      items: ["React 18", "Next.js 14", "TypeScript 5", "Tailwind CSS", "shadcn/ui", "Web Components"],
-      note: "SSR/SSG, erişilebilirlik ve kademeli iyileştirmeler."
+      items: ["Next.js", "React", "Tailwind", "Astro", "Alpine.js"],
+      note: "Hızlı açılan, SEO dostu ve çok dilli web siteleri."
     },
     {
-      area: "Sunucu tarafı",
-      items: ["Node.js 20", "Python (FastAPI)", "GraphQL", "tRPC", "WebSockets/SSE"],
-      note: "API-first mimari, tip güvenliği, gerçek zamanlılık."
+      area: "Sunucu Tarafı",
+      items: ["Node.js", "FastAPI", "tRPC", "Directus", "Hasura"],
+      note: "Sipariş, rezervasyon ve stok yönetimi için güvenilir API'ler."
     },
     {
-      area: "Veri & Depolama",
-      items: ["PostgreSQL 16", "Redis", "Drizzle/Prisma", "S3/R2"],
-      note: "Migrasyonlar, seed, çok kiracılı şema stratejileri."
+      area: "Veri & Raporlama",
+      items: ["PostgreSQL", "Supabase", "Firebase", "Metabase", "PowerBI"],
+      note: "Şube bazlı satış raporları ve gerçek zamanlı dashboard'lar."
     },
     {
       area: "Mobil",
-      items: ["SwiftUI", "Kotlin Compose", "React Native", "Push Notifications"],
-      note: "Yerel deneyim, güvenli oturum ve crash raporları."
+      items: ["React Native", "SwiftUI", "Kotlin", "Expo"],
+      note: "Sadakat, teslimat ve saha ekipleri için native deneyimler."
     },
     {
-      area: "DevOps & Bulut",
-      items: ["Docker", "Kubernetes", "GitHub Actions", "AWS/GCP/Azure", "Vercel", "Cloudflare"],
-      note: "Önizleme ortamları, blue/green dağıtımlar ve gözlemlenebilirlik."
+      area: "DevOps",
+      items: ["Vercel", "Railway", "Docker", "Fly.io", "Cloudflare"],
+      note: "Otomatik güncellemeler ve kesintisiz yayın akışı."
     },
     {
-      area: "Kalite & Test",
-      items: ["Playwright", "Vitest", "ESLint/Prettier", "OpenTelemetry", "Sentry"],
-      note: "Uçtan uca/görsel testler, izleme ve hata bütçeleri."
+      area: "Kalite",
+      items: ["Playwright", "Lighthouse", "Sentry", "Datadog"],
+      note: "Her yayında performans ve güvenlik kontrolleri."
     }
   ],
 
@@ -130,24 +120,24 @@ const D = {
   // Blog: tarihleri ISO veya YYYY-MM-DD tut
   blog: [
     {
-      title: "8 Haftada MVP: Neleri Sadeleştirdik?",
-      date: "2025-07-29",
-      excerpt: "Kapsam kırpma, yayın ritmi ve metrik takipleriyle MVP’yi 8 haftada yayına alma deneyimi.",
-      tags: ["Teslimat", "MVP"],
+      title: "QR Menünüzü 1 Günde Nasıl Güncellersiniz?",
+      date: "2025-08-12",
+      excerpt: "Mevsimsel ürünler, alerjen bilgisi ve kampanyaları tek panelden yönetmenin ipuçları.",
+      tags: ["QR Menü", "İpuçları"],
       url: "#"
     },
     {
-      title: "Playwright ile Stabil E2E",
-      date: "2025-05-18",
-      excerpt: "Flaky test’leri azaltmak için network stubbing, test ID'leri, trace viewer ve CI stratejileri.",
-      tags: ["Test"],
+      title: "Restoranlar İçin 5 Ödeme Entegrasyonu",
+      date: "2025-07-01",
+      excerpt: "Yemeksepeti, Getir, Trendyol ve POS cihazlarınızı aynı ekranda buluşturun.",
+      tags: ["POS", "Entegrasyon"],
       url: "#"
     },
     {
-      title: "Küçük Takımlarda IaC",
-      date: "2025-03-06",
-      excerpt: "Terraform modülleri ve GitHub Actions ile hızlı preview ortamları kurma yöntemlerimiz.",
-      tags: ["DevOps"],
+      title: "Yerel SEO ile Masanızı Doldurun",
+      date: "2025-05-20",
+      excerpt: "Google Business, Instagram ve web sitenizle organik rezervasyon artırma rehberi.",
+      tags: ["SEO", "Pazarlama"],
       url: "#"
     }
   ],
@@ -155,20 +145,20 @@ const D = {
   // SSS içeriği: EN/TR çeviriler zaten script’te TALL ile geliyor
   faq: [
     {
-      q: "Bakım ve geliştirme işlerini üstleniyor musunuz?",
-      a: "Evet. Mevcut sistemler için yeni özellik, hata düzeltme ve performans iyileştirmelerini düzenli olarak üstleniyoruz."
+      q: "QR menüyü ne kadar sürede yayına alıyorsunuz?",
+      a: "Menü içeriğiniz hazırsa aynı gün içinde yayınlıyoruz; eğitim ve tanıtım materyallerini de teslim ediyoruz."
     },
     {
-      q: "En hızlı nasıl başlayabiliriz?",
-      a: "1-2 haftalık Keşif Sprinti ile hedefleri netleştirip MVP kapsamını çıkarıyor, zaman ve maliyet tahminini etkileşimli akışlarla sunuyoruz."
+      q: "Web sitemizde rezervasyon ve sipariş alabilir miyiz?",
+      a: "Evet. Rezervasyon formu, online sipariş ve WhatsApp yönlendirmelerini aynı panelden yönetebilirsiniz."
     },
     {
-      q: "Hangi teknolojileri destekliyorsunuz?",
-      a: "Önyüzde HTML/CSS/JS ve modern framework'ler; backend'de Node/FastAPI; veride Postgres, Redis, S3; mobilde Swift ve Kotlin."
+      q: "POS entegrasyonlarında hangi sistemleri destekliyorsunuz?",
+      a: "Mikro, Logo, Paraşüt gibi muhasebe yazılımlarıyla Yemeksepeti, Getir, Trendyol gibi kanalları entegre ediyoruz."
     },
     {
-      q: "SLA sunuyor musunuz?",
-      a: "Adanmış ekip modelinde SLA, nöbet ve olay müdahale planlarını birlikte sağlıyoruz."
+      q: "Destek sonrası bakım sunuyor musunuz?",
+      a: "Aylık bakım paketiyle sürüm yükseltmeleri, yedekleme ve güvenlik kontrollerini biz üstleniyoruz."
     }
   ]
 };
@@ -177,7 +167,7 @@ const D = {
 const TALL = {
   en:{ nav:{projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
        hero:{kicker:"Design • Build • Launch",titlePrefix:"Digital solutions",titleGradient:"for",titleSuffix:"local businesses",lead:"We help cafes and neighborhood retailers launch fast websites, mobile apps, QR menus, and POS integrations with one dedicated team.",cta1:"Request a Quote",cta2:"View Projects"},
-       sections:{servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
+       sections:{servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Fast, reliable tools for hospitality, retail, and delivery teams.",pricing:"Packages",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
        services:{
          mobileTitle:"Mobile Apps",
          mobileDesc:"iOS & Android apps that keep local customers coming back.",
@@ -217,7 +207,7 @@ const TALL = {
      },
   tr:{ nav:{projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
        hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Yerel işletmelere",titleGradient:"özel",titleSuffix:"dijital çözümler",lead:"Bursa ve çevresindeki kafe, restoran ve işletmeler için web sitesi, mobil uygulama, QR menü ve POS yazılımlarını tek ekipten sunuyoruz.",cta1:"Teklif Alın",cta2:"Projelerimizi Görün"},
-       sections:{servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
+       sections:{servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel markalara özel dijital çözümler geliştiriyoruz.",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Hızlı, güvenilir ve yerel ihtiyaçlara uygun araçlar.",pricing:"Paketler",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
        services:{
          mobileTitle:"Mobil Uygulama",
          mobileDesc:"Mahallenizdeki müşterilere doğrudan ulaşan iOS & Android uygulamaları.",
