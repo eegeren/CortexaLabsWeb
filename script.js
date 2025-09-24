@@ -32,15 +32,6 @@ const D = {
     location:  "Bursa, Türkiye • Uzaktan öncelikli"
   },
 
-  clients: [
-    { name: "Anadolu Perakende Grubu",  note: "E-ticaret ve sipariş yönetim paneli" },
-    { name: "Boğaziçi Lojistik",        note: "Kurye takip mobil uygulaması" },
-    { name: "EgeTech SaaS",             note: "Çok kiracılı B2B platform" },
-    { name: "Kapadokya Travel",         note: "Rezervasyon motoru ve yönetim paneli" },
-    { name: "Finera Ödeme Sistemleri",  note: "Bayiler için KYC/KYB portalı" },
-    { name: "Medicus Klinik Ağı",       note: "Hasta portalı ve entegrasyon API'leri" }
-  ],
-
   projects: [
     {
       title: "Çok Kiracılı B2B Yönetim Paneli",
@@ -132,21 +123,6 @@ const D = {
     }
   ],
 
-  testimonials: [
-    {
-      author: "A. Yılmaz — COO, Anatolia Retail Group",
-      quote: "Operasyon paneli ile iade/iptal süremiz kısaldı, raporlar gerçek zamanlı hale geldi."
-    },
-    {
-      author: "D. Erden — CTO, Bosporus Logistics",
-      quote: "Kurye uygulaması sahada stabil çalışıyor; offline senkronizasyon işimizi çok rahatlattı."
-    },
-    {
-      author: "E. Soylu — CEO, EgeTech",
-      quote: "Uçtan uca teslim ve net iletişim: haftalık demo ve ölçülebilir ilerleme gördük."
-    }
-  ],
-
   // Blog: tarihleri ISO veya YYYY-MM-DD tut
   blog: [
     {
@@ -195,9 +171,9 @@ const D = {
 /* ======== /REAL(ISTIC) DATA ======== */
 
 const TALL = {
-  en:{ nav:{clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
+  en:{ nav:{projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
        hero:{kicker:"Design • Build • Launch",titlePrefix:"Digital solutions",titleGradient:"for",titleSuffix:"local businesses",lead:"We help cafes and neighborhood retailers launch fast websites, mobile apps, QR menus, and POS integrations with one dedicated team.",cta1:"Request a Quote",cta2:"View Projects"},
-       sections:{servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
+       sections:{servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
        services:{
          mobileTitle:"Mobile Apps",
          mobileDesc:"iOS & Android apps that keep local customers coming back.",
@@ -234,9 +210,9 @@ const TALL = {
        pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}],
        blogRead:"Read"
      },
-  tr:{ nav:{clients:"Müşteriler",projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
+  tr:{ nav:{projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
        hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Yerel işletmelere",titleGradient:"özel",titleSuffix:"dijital çözümler",lead:"Bursa ve çevresindeki kafe, restoran ve işletmeler için web sitesi, mobil uygulama, QR menü ve POS yazılımlarını tek ekipten sunuyoruz.",cta1:"Teklif Alın",cta2:"Projelerimizi Görün"},
-       sections:{servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
+       sections:{servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
        services:{
          mobileTitle:"Mobil Uygulama",
          mobileDesc:"Mahallenizdeki müşterilere doğrudan ulaşan iOS & Android uygulamaları.",
@@ -283,17 +259,6 @@ let LANG = LS.get(LANG_KEY,'tr');
 })();
 
 /* renderers */
-function renderClients(){
-  const el=$('clientsGrid'); if(!el) return;
-  el.innerHTML=D.clients.map(c=>`
-    <div class="logo-card reveal">
-      <div class="dot"></div>
-      <div>
-        <div class="logo-name">${esc(c.name)}</div>
-        <div class="logo-note">${esc(c.note||'')}</div>
-      </div>
-    </div>`).join('');
-}
 function renderProjects(filter=LS.get(FILTER_KEY,'all')){
   const el=$('projectsGrid'); if(!el) return;
   const items=D.projects.filter(p=> filter==='all' ? true : (p.tags||[]).includes(filter));
@@ -331,14 +296,6 @@ function renderPricing(lang){
       <a href="#contact" class="btn btn-primary" style="margin-top:10px">${esc(tp[i]?.label || p.cta || (LANG==='tr'?'İletişim':'Contact'))}</a>
     </article>`).join('');
 }
-function renderTestimonials(){
-  const el=$('testimonialsGrid'); if(!el) return;
-  el.innerHTML=(D.testimonials||[]).map(t=>`
-    <article class="card reveal">
-      <p class="quote">“${esc(t.quote)}”</p>
-      <div class="author">— ${esc(t.author)}</div>
-    </article>`).join('');
-}
 function renderBlog(){
   const el=$('blogGrid'); if(!el) return;
   const readLabel=(TALL[LANG]?.blogRead)||'Oku';
@@ -367,9 +324,9 @@ function applyI18n(lang){
   const TL=TALL[lang]||TALL.en;
   // nav & footer
   const map = [
-    ['navClients','clients'],['navProjects','projects'],['navStack','stack'],
+    ['navProjects','projects'],['navStack','stack'],
     ['navPricing','pricing'],['navFAQ','faq'],['navContact','contact'],
-    ['footClients','clients'],['footProjects','projects'],
+    ['footProjects','projects'],
     ['footStack','stack'],['footPricing','pricing'],['footFAQ','faq']
   ];
   map.forEach(([id,k])=>{ const el=$(id); if(el) el.textContent = TL.nav[k]; });
@@ -386,12 +343,10 @@ function applyI18n(lang){
   // sections
   $('titleServices').textContent=TL.sections.servicesTitle;
   $('subServices').textContent=TL.sections.servicesSub;
-  $('titleClients').textContent=TL.sections.clients;
   $('titleProjects').textContent=TL.sections.projects;
   $('titleStack').textContent=TL.sections.stackTitle;
   $('subStack').textContent=TL.sections.stackSub;
   $('titlePricing').textContent=TL.sections.pricing;
-  $('titleTestimonials').textContent=TL.sections.testimonials;
   $('titleBlog').textContent=TL.sections.blog || 'Blog & Updates';
   $('titleFAQ').textContent=TL.sections.faq;
   $('titleContact').textContent=TL.sections.contactTitle;
@@ -416,8 +371,8 @@ function applyI18n(lang){
 
 /* initial render + reveal */
 function initialRender(){
-  renderClients(); renderProjects(LS.get(FILTER_KEY,'all'));
-  renderStack(); renderPricing(LANG); renderTestimonials(); renderBlog(); renderFAQ();
+  renderProjects(LS.get(FILTER_KEY,'all'));
+  renderStack(); renderPricing(LANG); renderBlog(); renderFAQ();
 
   const io=new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
