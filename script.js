@@ -205,14 +205,76 @@ const D = {
 const TALL = {
   en:{ nav:{metrics:"Metrics",clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Get in touch"},
        hero:{kicker:"Design • Build • Launch",titlePrefix:"Full-Stack",titleGradient:"Web",titleSuffix:"Mobile & Backend",lead:"We’re a growing product team delivering end-to-end software — modern websites, iOS/Android apps, and reliable backends with clean APIs.",cta1:"Start a Project",cta2:"See Projects"},
-       sections:{metrics:"Proof we deliver",servicesTitle:"What we do",servicesSub:"Product delivery end-to-end: web, mobile, backend, and cloud.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Tell us about your web, mobile, or backend needs. We’ll reply fast.",blog:"Blog & Updates"},
-       services:{webTitle:"Web Platforms",webDesc:"Modern, responsive sites and dashboards with accessible UX.",webLi2:"Dashboards, portals, admin panels",webLi3:"SSR or static builds",mobTitle:"Mobile Apps",mobDesc:"Native iOS & Android with secure auth and offline-first data.",mobLi2:"Push notifications & analytics",mobLi3:"Store publishing & crash reports",backTitle:"Backend & APIs",backDesc:"Clean architecture, observability, and robust integrations.",backLi3:"Auth, roles, audit logs",cloudTitle:"Cloud & DevOps",cloudDesc:"CI/CD, environments, monitoring, and cost/reliability baselines.",cloudLi3:"Metrics & alerts"},
+       sections:{metrics:"Proof we deliver",servicesTitle:"Local Business Services",servicesSub:"Digital solutions tailored for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Tell us about your web, mobile, or backend needs. We’ll reply fast.",blog:"Blog & Updates"},
+       services:{
+         mobileTitle:"Mobile Apps",
+         mobileDesc:"iOS & Android apps that keep local customers coming back.",
+         mobileLi1:"Loyalty, delivery, and campaign modules",
+         mobileLi2:"Push notifications to drive repeat orders",
+         mobileLi3:"App Store & Google Play launch support",
+         localWebTitle:"Websites for Cafes & Local Businesses",
+         localWebDesc:"Show menus, reservations, and promotions from a single dashboard.",
+         localWebLi1:"Fast, SEO-friendly pages that rank locally",
+         localWebLi2:"Online ordering and reservation forms",
+         localWebLi3:"Multilingual content with easy updates",
+         qrTitle:"QR Menus",
+         qrDesc:"Touchless menus you can update in seconds.",
+         qrLi1:"Edit pricing, allergens, and stock instantly",
+         qrLi2:"Unique QR codes per table for better tracking",
+         qrLi3:"Rich photos and promo placements",
+         posTitle:"POS & Cashier Software",
+         posDesc:"Flexible POS flows that speed up front-of-house teams.",
+         posLi1:"Inventory and product management",
+         posLi2:"Invoices, e-archive, and daily reports",
+         posLi3:"Integrations with Yemeksepeti, Getir, Trendyol",
+         solutionsTitle:"Custom Solutions",
+         solutionsDesc:"Automations and integrations tailored to your operations.",
+         solutionsLi1:"CRM, accounting, and ERP integrations",
+         solutionsLi2:"Franchise, branch, and campaign management",
+         solutionsLi3:"Secure APIs and admin consoles",
+         supportTitle:"Software Support",
+         supportDesc:"Keep your existing systems stable and up to date.",
+         supportLi1:"Feature improvements and bug fixes",
+         supportLi2:"Performance, security, and backup checks",
+         supportLi3:"24/7 support plans with SLAs"
+       },
        form:{name:"Your name",email:"Email",company:"Company (optional)",message:"Your project / idea",send:"Send",sending:"Sending...",thanks:"Thanks! We will get back to you shortly."},
        pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}] },
   tr:{ nav:{metrics:"Metri̇kler",clients:"Müşteriler",projects:"Projeler",stack:"Teknoloji",pricing:"Fiyatlandırma",faq:"SSS",contact:"İletişim"},
        hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Tam Yığın",titleGradient:"Web",titleSuffix:"Mobil & Backend",lead:"Modern web siteleri, iOS/Android uygulamaları ve güvenilir API’lerle uçtan uca yazılım geliştiriyoruz.",cta1:"Proje Başlat",cta2:"Projeleri Gör"},
-       sections:{metrics:"Teslim gücümüz",servicesTitle:"Ne yapıyoruz",servicesSub:"Uçtan uca teslim: web, mobil, backend ve bulut.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya backend ihtiyacınızı anlatın. Hızlı dönüş yaparız.",blog:"Blog & Güncellemeler"},
-       services:{webTitle:"Web Platformları",webDesc:"Erişilebilir UX ile modern, duyarlı siteler ve paneller.",webLi2:"Paneller, portallar, yönetim ekranları",webLi3:"SSR veya statik yayın",mobTitle:"Mobil Uygulamalar",mobDesc:"Güvenli kimlik doğrulama ve offline destekli iOS & Android.",mobLi2:"Bildirimler & analitik",mobLi3:"Store yayınlama & crash raporları",backTitle:"Backend & API’ler",backDesc:"Temiz mimari, gözlemlenebilirlik ve güçlü entegrasyonlar.",backLi3:"Yetkilendirme, roller, denetim kayıtları",cloudTitle:"Bulut & DevOps",cloudDesc:"CI/CD, ortamlar, izleme ve maliyet/güvenilirlik bazları.",cloudLi3:"Metrikler & uyarılar"},
+       sections:{metrics:"Teslim gücümüz",servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya backend ihtiyacınızı anlatın. Hızlı dönüş yaparız.",blog:"Blog & Güncellemeler"},
+       services:{
+         mobileTitle:"Mobil Uygulama",
+         mobileDesc:"Mahallenizdeki müşterilere doğrudan ulaşan iOS & Android uygulamaları.",
+         mobileLi1:"Sadakat, kampanya ve teslimat modülleri",
+         mobileLi2:"Push bildirimleriyle tekrar sipariş kazanın",
+         mobileLi3:"App Store ve Google Play yayın süreçleri",
+         localWebTitle:"Kafeler & İşletmelere Web Siteleri",
+         localWebDesc:"Rezervasyon, menü ve kampanyalarınızı tek panelden yönetin.",
+         localWebLi1:"Hızlı açılan, SEO uyumlu sayfalar",
+         localWebLi2:"Online sipariş ve rezervasyon formları",
+         localWebLi3:"Çok dilli içerik ve kolay güncelleme",
+         qrTitle:"QR Menüler",
+         qrDesc:"Temassız, anında güncellenebilir dijital menüler.",
+         qrLi1:"Alerjen, fiyat ve stok takibi anlık güncelleme",
+         qrLi2:"Her masa için benzersiz QR kodu yönetimi",
+         qrLi3:"Fotoğraf ve kampanya alanları",
+         posTitle:"POS / Kasa Yazılımları",
+         posDesc:"Kasadaki işlemleri hızlandıran ölçeklenebilir POS çözümleri.",
+         posLi1:"Stok takibi ve ürün yönetimi",
+         posLi2:"Fatura, e-Arşiv ve raporlar",
+         posLi3:"Yemeksepeti, Getir vb. entegrasyonlar",
+         solutionsTitle:"Özel Çözümler",
+         solutionsDesc:"İşletmenize özel entegrasyon ve otomasyonlar geliştiriyoruz.",
+         solutionsLi1:"CRM, muhasebe ve ERP entegrasyonları",
+         solutionsLi2:"Bayi yönetimi ve kampanya araçları",
+         solutionsLi3:"Güvenli API ve yönetim panelleri",
+         supportTitle:"Yazılım Destekleri",
+         supportDesc:"Mevcut yazılımlarınızı güncel ve sorunsuz tutuyoruz.",
+         supportLi1:"Yeni özellik geliştirme ve hata düzeltme",
+         supportLi2:"Performans, güvenlik ve yedekleme kontrolleri",
+         supportLi3:"7/24 destek ve SLA seçenekleri"
+       },
        form:{name:"Adınız",email:"E-posta",company:"Şirket (opsiyonel)",message:"Proje/İdea",send:"Gönder",sending:"Gönderiliyor...",thanks:"Teşekkürler! En kısa sürede dönüş yapacağız."},
        pricingCtas:[{label:"Teklif İste"},{label:"Teklif İste"},{label:"Teklif İste"}] }
 };
@@ -349,10 +411,12 @@ function applyI18n(lang){
 
   // services
   const S=TL.services;
-  $('svcWebTitle').textContent=S.webTitle; $('svcWebDesc').textContent=S.webDesc; $('svcWebLi2').textContent=S.webLi2; $('svcWebLi3').textContent=S.webLi3;
-  $('svcMobTitle').textContent=S.mobTitle; $('svcMobDesc').textContent=S.mobDesc; $('svcMobLi2').textContent=S.mobLi2; $('svcMobLi3').textContent=S.mobLi3;
-  $('svcBackTitle').textContent=S.backTitle; $('svcBackDesc').textContent=S.backDesc; $('svcBackLi3').textContent=S.backLi3;
-  $('svcCloudTitle').textContent=S.cloudTitle; $('svcCloudDesc').textContent=S.cloudDesc; $('svcCloudLi3').textContent=S.cloudLi3;
+  $('svcMobileTitle').textContent=S.mobileTitle; $('svcMobileDesc').textContent=S.mobileDesc; $('svcMobileLi1').textContent=S.mobileLi1; $('svcMobileLi2').textContent=S.mobileLi2; $('svcMobileLi3').textContent=S.mobileLi3;
+  $('svcLocalWebTitle').textContent=S.localWebTitle; $('svcLocalWebDesc').textContent=S.localWebDesc; $('svcLocalWebLi1').textContent=S.localWebLi1; $('svcLocalWebLi2').textContent=S.localWebLi2; $('svcLocalWebLi3').textContent=S.localWebLi3;
+  $('svcQRTitle').textContent=S.qrTitle; $('svcQRDesc').textContent=S.qrDesc; $('svcQRLi1').textContent=S.qrLi1; $('svcQRLi2').textContent=S.qrLi2; $('svcQRLi3').textContent=S.qrLi3;
+  $('svcPOSTitle').textContent=S.posTitle; $('svcPOSDesc').textContent=S.posDesc; $('svcPOSLi1').textContent=S.posLi1; $('svcPOSLi2').textContent=S.posLi2; $('svcPOSLi3').textContent=S.posLi3;
+  $('svcSolutionsTitle').textContent=S.solutionsTitle; $('svcSolutionsDesc').textContent=S.solutionsDesc; $('svcSolutionsLi1').textContent=S.solutionsLi1; $('svcSolutionsLi2').textContent=S.solutionsLi2; $('svcSolutionsLi3').textContent=S.solutionsLi3;
+  $('svcSupportTitle').textContent=S.supportTitle; $('svcSupportDesc').textContent=S.supportDesc; $('svcSupportLi1').textContent=S.supportLi1; $('svcSupportLi2').textContent=S.supportLi2; $('svcSupportLi3').textContent=S.supportLi3;
 
   // form
   const F=TL.form;
