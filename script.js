@@ -43,8 +43,8 @@ const D = {
       tags: ["QR", "Menu", "Kafe"]
     },
     {
-      title: "Bursa Kebap Evi Web Sitesi",
-      desc: "SEO uyumlu vitrin, rezervasyon & paket servis formları, Google Business senkronizasyonu.",
+      title: "Nilüfer Balık Lokantası Web Sitesi",
+      desc: "Çok dilli menü, rezervasyon formu ve haftalık taze ürün blogu ile güncel vitrin.",
       tags: ["Web", "SEO", "Rezervasyon"]
     },
     {
@@ -260,10 +260,12 @@ let LANG = LS.get(LANG_KEY,'tr');
 /* renderers */
 function renderProjects(filter=LS.get(FILTER_KEY,'all')){
   const el=$('projectsGrid'); if(!el) return;
-  let items=D.projects.filter(p=> filter==='all' ? true : (p.tags||[]).includes(filter));
+  const target=(filter||'all').toString().toLowerCase();
+  let items=D.projects.filter(p=> target==='all' ? true : (p.tags||[]).some(t=>t.toLowerCase()===target));
+  let effective=target;
   if(!items.length){
     items=D.projects;
-    filter='all';
+    effective='all';
     LS.set(FILTER_KEY,'all');
   }
   el.innerHTML=items.map(p=>`
@@ -274,7 +276,8 @@ function renderProjects(filter=LS.get(FILTER_KEY,'all')){
     </article>`).join('');
   // set active chip
   document.querySelectorAll('#projFilter .chip').forEach(b=>{
-    b.classList.toggle('is-active', b.dataset.tag===filter || (filter==='all'&&b.dataset.tag==='all'));
+    const tag=(b.dataset.tag||'').toLowerCase();
+    b.classList.toggle('is-active', tag===effective || (effective==='all'&&tag==='all'));
   });
 }
 function renderStack(){
@@ -423,7 +426,7 @@ document.querySelectorAll('.swatch').forEach(sw=>{
 /* project filter (persist) */
 document.querySelectorAll('#projFilter .chip').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    const tag=btn.dataset.tag||'all';
+    const tag=(btn.dataset.tag||'all').toLowerCase();
     LS.set(FILTER_KEY, tag);
     renderProjects(tag);
   });
