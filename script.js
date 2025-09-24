@@ -29,7 +29,11 @@ $('year').textContent = new Date().getFullYear().toString();
 const D = {
   company: {
     email: "yusufegeeren@cortexaai.net",
-    location:  "Bursa, Türkiye • Uzaktan öncelikli"
+    location:  "Bursa, Türkiye • Uzaktan öncelikli",
+    phone: "+90 532 222 33 44",
+    phoneHref: "+905322223344",
+    whatsappHref: "https://wa.me/905322223344?text=Merhaba%20Cortexa%20Labs%2C%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
+    calendar: "https://cal.com/cortexalabs/30min"
   },
 
   projects: [
@@ -101,24 +105,24 @@ const D = {
   // Fiyatları gizli tutuyoruz: "Custom quote"
   pricing: [
     {
-      plan: "Keşif Sprinti",
-      price: "Proje bazlı teklif",
-      bestFor: "En hızlı başlangıç",
-      features: ["Hedef ve kapsam analizi", "UX akışları + API sözleşmeleri", "Yol haritası ve takvim"],
+      plan: "QR Menü Starter",
+      price: "Başlangıç 2.900₺",
+      bestFor: "Kafeler & restoranlar",
+      features: ["Sınırsız kategori ve ürün", "Her masa için QR", "Günlük menü ve kampanya alanı"],
       cta: "Teklif İste"
     },
     {
-      plan: "Sabit Fiyatlı MVP",
-      price: "Proje bazlı teklif",
-      bestFor: "8-10 haftada lansman",
-      features: ["Netleştirilmiş kapsam", "Haftalık demo ve raporlar", "Lansman desteği"],
+      plan: "Web Site Express",
+      price: "4 haftada teslim",
+      bestFor: "Yerel işletme vitrinleri",
+      features: ["SEO uyumlu tek sayfa", "Rezervasyon/iletişim formları", "Google Business entegrasyonu"],
       cta: "Teklif İste"
     },
     {
-      plan: "Adanmış Ekip",
+      plan: "POS & Entegrasyon Paketi",
       price: "Aylık abonelik",
-      bestFor: "Sürekli geliştirme",
-      features: ["Tam zamanlı mühendisler", "Esnek backlog", "SLA'lar ve nöbet"],
+      bestFor: "Şube ve franchise",
+      features: ["Stok & satış raporları", "Yemeksepeti/Getir entegrasyonları", "Özel eğitim ve onboarding"],
       cta: "Teklif İste"
     }
   ],
@@ -206,6 +210,7 @@ const TALL = {
          supportLi2:"Performance, security, and backup checks",
          supportLi3:"24/7 support plans with SLAs"
        },
+       quick:{title:"Quick contact",note:"Reach us via WhatsApp, phone, or book a call. We'll respond the same day.",whatsapp:"Message on WhatsApp",call:"Call now",meeting:"Schedule a meeting"},
        form:{name:"Your name",email:"Email",company:"Company (optional)",message:"Project or idea",send:"Send",sending:"Sending...",thanks:"Thanks! We will get back to you shortly."},
        pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}],
        blogRead:"Read"
@@ -245,6 +250,7 @@ const TALL = {
          supportLi2:"Performans, güvenlik ve yedekleme kontrolleri",
          supportLi3:"7/24 destek ve SLA seçenekleri"
        },
+       quick:{title:"Hızlı iletişim kanalları",note:"WhatsApp, telefon veya takvimden bize ulaşın; aynı gün dönüş yapalım.",whatsapp:"WhatsApp'tan Yazın",call:"Hemen Arayın",meeting:"Görüşme Planlayın"},
        form:{name:"Adınız",email:"E-posta",company:"Şirket (opsiyonel)",message:"Proje/Fikir",send:"Gönder",sending:"Gönderiliyor...",thanks:"Teşekkürler! En kısa sürede dönüş yapacağız."},
        pricingCtas:[{label:"Teklif İste"},{label:"Teklif İste"},{label:"Teklif İste"}],
        blogRead:"Oku"
@@ -256,6 +262,9 @@ let LANG = LS.get(LANG_KEY,'tr');
 (function(){
   const emailA=$('contactEmail'); if(emailA){ emailA.textContent=D.company.email; emailA.href=`mailto:${D.company.email}`; }
   const loc=$('locationTxt'); if(loc){ loc.textContent=D.company.location; }
+  $('quickWhatsapp')?.setAttribute('href', D.company.whatsappHref||'#');
+  $('quickPhone')?.setAttribute('href', D.company.phoneHref?`tel:${D.company.phoneHref}`:'#');
+  $('quickMeeting')?.setAttribute('href', D.company.calendar||'#');
 })();
 
 /* renderers */
@@ -360,6 +369,16 @@ function applyI18n(lang){
   $('svcPOSTitle').textContent=S.posTitle; $('svcPOSDesc').textContent=S.posDesc; $('svcPOSLi1').textContent=S.posLi1; $('svcPOSLi2').textContent=S.posLi2; $('svcPOSLi3').textContent=S.posLi3;
   $('svcSolutionsTitle').textContent=S.solutionsTitle; $('svcSolutionsDesc').textContent=S.solutionsDesc; $('svcSolutionsLi1').textContent=S.solutionsLi1; $('svcSolutionsLi2').textContent=S.solutionsLi2; $('svcSolutionsLi3').textContent=S.solutionsLi3;
   $('svcSupportTitle').textContent=S.supportTitle; $('svcSupportDesc').textContent=S.supportDesc; $('svcSupportLi1').textContent=S.supportLi1; $('svcSupportLi2').textContent=S.supportLi2; $('svcSupportLi3').textContent=S.supportLi3;
+
+  // quick contact
+  const Q=TL.quick;
+  if(Q){
+    $('quickContactTitle').textContent=Q.title;
+    $('quickContactNote').textContent=Q.note;
+    $('quickWhatsapp').textContent=Q.whatsapp;
+    $('quickPhone').textContent=Q.call;
+    $('quickMeeting').textContent=Q.meeting;
+  }
 
   // form
   const F=TL.form;

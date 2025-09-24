@@ -94,7 +94,7 @@ h1{font-size:44px;line-height:1.15;margin:0}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border);color:#fff;font-size:13px;line-height:1}
 .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
 
-/* pricing & testimonials */
+/* pricing */
 .price{font-size:24px;font-weight:700;margin:6px 0}
 .list{padding-left:18px;text-align:left}
 .quote{font-style:italic}
@@ -103,6 +103,9 @@ h1{font-size:44px;line-height:1.15;margin:0}
 /* contact */
 .cta{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .form-card{max-width:980px;margin:0 auto}
+.quick-contact{margin-bottom:32px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:16px;padding:20px}
+.quick-contact-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.quick-contact .btn{min-width:180px;justify-content:center}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
 .form-row{display:flex;flex-direction:column;gap:6px}
 .contact-form input,.contact-form textarea{padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:#fff}
