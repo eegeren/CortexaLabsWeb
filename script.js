@@ -40,22 +40,26 @@ const D = {
     {
       title: "Kahve Durağı QR Menü Platformu",
       desc: "Her masa için benzersiz QR, fotoğraflı menü yönetimi ve günlük kampanya duyuruları.",
-      tags: ["QR", "Menu", "Kafe"]
+      tags: ["QR", "Menu", "Kafe"],
+      image: "assets/projects/qr-menu.svg"
     },
     {
       title: "Bursa Kebap Evi Web Sitesi",
       desc: "SEO uyumlu vitrin, rezervasyon & paket servis formları, Google Business senkronizasyonu.",
-      tags: ["Web", "SEO", "Rezervasyon"]
+      tags: ["Web", "SEO", "Rezervasyon"],
+      image: "assets/projects/restaurant-web.svg"
     },
     {
       title: "Meyra Pastaneleri POS Entegrasyonu",
       desc: "Stok-satış raporları, Yemeksepeti/Getir entegrasyonları ve günlük kasa kapanışı otomasyonu.",
-      tags: ["POS", "Entegrasyon", "Rapor"]
+      tags: ["POS", "Entegrasyon", "Rapor"],
+      image: "assets/projects/pos-integration.svg"
     },
     {
       title: "Granola Cafe Sadakat Uygulaması",
       desc: "iOS/Android uygulamasıyla puan toplama, push kampanyaları ve teslimat takibi.",
-      tags: ["Mobil", "Sadakat", "Push"]
+      tags: ["Mobil", "Sadakat", "Push"],
+      image: "assets/projects/loyalty-app.svg"
     }
   ],
 
@@ -124,21 +128,24 @@ const D = {
       date: "2025-08-12",
       excerpt: "Mevsimsel ürünler, alerjen bilgisi ve kampanyaları tek panelden yönetmenin ipuçları.",
       tags: ["QR Menü", "İpuçları"],
-      url: "#"
+      url: "#",
+      image: "assets/projects/blog-qr.svg"
     },
     {
       title: "Restoranlar İçin 5 Ödeme Entegrasyonu",
       date: "2025-07-01",
       excerpt: "Yemeksepeti, Getir, Trendyol ve POS cihazlarınızı aynı ekranda buluşturun.",
       tags: ["POS", "Entegrasyon"],
-      url: "#"
+      url: "#",
+      image: "assets/projects/blog-pos.svg"
     },
     {
       title: "Yerel SEO ile Masanızı Doldurun",
       date: "2025-05-20",
       excerpt: "Google Business, Instagram ve web sitenizle organik rezervasyon artırma rehberi.",
       tags: ["SEO", "Pazarlama"],
-      url: "#"
+      url: "#",
+      image: "assets/projects/blog-seo.svg"
     }
   ],
 
@@ -268,9 +275,12 @@ function renderProjects(filter=LS.get(FILTER_KEY,'all')){
   }
   el.innerHTML=items.map(p=>`
     <article class="proj reveal">
-      <h4>${esc(p.title)}</h4>
-      <p>${esc(p.desc)}</p>
-      <div class="tags">${(p.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+      ${p.image?`<div class="proj-media"><img src="${esc(p.image)}" alt="${esc(p.title)}"></div>`:''}
+      <div class="proj-body">
+        <h4>${esc(p.title)}</h4>
+        <p>${esc(p.desc)}</p>
+        <div class="tags">${(p.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+      </div>
     </article>`).join('');
   // set active chip
   document.querySelectorAll('#projFilter .chip').forEach(b=>{
@@ -305,11 +315,14 @@ function renderBlog(){
   const readLabel=(TALL[LANG]?.blogRead)||'Oku';
   el.innerHTML=(D.blog||[]).map(b=>`
     <article class="proj reveal">
-      <h4>${esc(b.title)}</h4>
-      <p class="muted" style="margin:.2rem 0">${esc(b.date)}</p>
-      <p>${esc(b.excerpt)}</p>
-      <div class="tags">${(b.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
-      <div style="margin-top:10px"><a href="${b.url}" class="btn">${esc(readLabel)}</a></div>
+      ${b.image?`<div class="proj-media"><img src="${esc(b.image)}" alt="${esc(b.title)}"></div>`:''}
+      <div class="proj-body">
+        <h4>${esc(b.title)}</h4>
+        <p class="muted" style="margin:.2rem 0">${esc(b.date)}</p>
+        <p>${esc(b.excerpt)}</p>
+        <div class="tags">${(b.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+        <div style="margin-top:10px"><a href="${b.url}" class="btn">${esc(readLabel)}</a></div>
+      </div>
     </article>`).join('');
 }
 function renderFAQ(){

@@ -84,6 +84,9 @@ h1{font-size:44px;line-height:1.15;margin:0}
 .chip.is-active{border-color:var(--accent);background:rgba(255,255,255,.08)}
 .proj-grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
 .proj{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;transition:transform .15s ease, box-shadow .2s ease}
+.proj-media{overflow:hidden;border-radius:12px;margin:-18px -18px 16px}
+.proj-media img{width:100%;display:block;border-radius:12px}
+.proj-body h4{margin-top:0}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .tags span{padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px}
 
