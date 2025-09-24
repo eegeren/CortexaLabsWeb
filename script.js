@@ -29,7 +29,7 @@ $('year').textContent = new Date().getFullYear().toString();
 const D = {
   company: {
     email: "yusufegeeren@cortexaai.net",
-    location:  "Bursa, Türkiye • Uzaktan öncelikli",
+    location:  ",
     phone: "+90 532 222 33 44",
     phoneHref: "+905322223344",
     whatsappHref: "https://wa.me/905322223344?text=Merhaba%20Cortexa%20Labs%2C%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.",
