@@ -29,114 +29,114 @@ $('year').textContent = new Date().getFullYear().toString();
 const D = {
   company: {
     email: "yusufegeeren@cortexaai.net",
-    location:  "Bursa, TR • Remote-first"
+    location:  "Bursa, Türkiye • Uzaktan öncelikli"
   },
 
   // Son 18 ay verileri baz alınarak düzenlendi
   metrics: [
-    { k: "18",  v: "Clients" },
-    { k: "41",  v: "Projects delivered" },
-    { k: "9",   v: "Team size" },
-    { k: "6–9", v: "Avg delivery (weeks)" }
+    { k: "18",  v: "Aktif müşteri" },
+    { k: "41",  v: "Tamamlanan proje" },
+    { k: "9",   v: "Çekirdek ekip" },
+    { k: "6–9", v: "Ortalama teslim (hafta)" }
   ],
 
   clients: [
-    { name: "Anatolia Retail Group",  note: "E-commerce & OMS dashboard" },
-    { name: "Bosporus Logistics",     note: "Courier tracking mobile app" },
-    { name: "EgeTech SaaS",           note: "Multi-tenant B2B platform" },
-    { name: "Kapadokya Travel",       note: "Booking engine + admin" },
-    { name: "Finera Payments",        note: "Merchant portal (KYC/KYB)" },
-    { name: "Medicus Clinic Network", note: "Patient portal + API" }
+    { name: "Anadolu Perakende Grubu",  note: "E-ticaret ve sipariş yönetim paneli" },
+    { name: "Boğaziçi Lojistik",        note: "Kurye takip mobil uygulaması" },
+    { name: "EgeTech SaaS",             note: "Çok kiracılı B2B platform" },
+    { name: "Kapadokya Travel",         note: "Rezervasyon motoru ve yönetim paneli" },
+    { name: "Finera Ödeme Sistemleri",  note: "Bayiler için KYC/KYB portalı" },
+    { name: "Medicus Klinik Ağı",       note: "Hasta portalı ve entegrasyon API'leri" }
   ],
 
   projects: [
     {
-      title: "B2B Multi-Tenant Admin",
-      desc: "RBAC, audit logs, tenant isolation, usage metering.",
+      title: "Çok Kiracılı B2B Yönetim Paneli",
+      desc: "Rol bazlı yetki, denetim kayıtları, kiracı izolasyonu ve kullanım raporları.",
       tags: ["HTML/CSS/JS", "Node", "Postgres"]
     },
     {
-      title: "Merchant & Payouts Portal",
-      desc: "KYC/KYB flows, settlements, dispute center, exports.",
+      title: "Bayi Ödeme ve Mutabakat Portalı",
+      desc: "KYC/KYB süreçleri, ödeme mutabakatı, itiraz yönetimi ve dışa aktarımlar.",
       tags: ["Vanilla JS", "REST API", "S3"]
     },
     {
-      title: "Real-time Delivery App",
-      desc: "Courier location, push alerts, offline queue sync.",
+      title: "Gerçek Zamanlı Kurye Uygulaması",
+      desc: "Anlık konum, push bildirimleri, offline kuyruk senkronizasyonu.",
       tags: ["Swift", "Kotlin", "JWT"]
     },
     {
-      title: "Travel Booking Engine",
-      desc: "Inventory, calendar pricing, vouchers, invoices.",
+      title: "Tur & Konaklama Rezervasyon Motoru",
+      desc: "Stok yönetimi, takvim bazlı fiyatlama, kupon ve fatura üretimi.",
       tags: ["JS", "WebSockets", "Redis"]
     },
     {
-      title: "Healthcare Patient Portal",
-      desc: "Appointments, lab results, secure messaging.",
+      title: "Sağlık Hasta Portalı",
+      desc: "Randevular, laboratuvar sonuçları ve güvenli mesajlaşma.",
       tags: ["HTML/CSS/JS", "FastAPI", "Postgres"]
     },
     {
-      title: "Ops Dashboard for Retail",
-      desc: "Stock sync, order statuses, SLA metrics & alerts.",
+      title: "Perakende Operasyon Paneli",
+      desc: "Stok senkronizasyonu, sipariş durumları, SLA metrikleri ve uyarılar.",
       tags: ["Node", "Postgres", "S3"]
     }
   ],
 
   stack: [
     {
-      area: "Frontend",
+      area: "Önyüz",
       items: ["React 18", "Next.js 14", "TypeScript 5", "Tailwind CSS", "shadcn/ui", "Web Components"],
-      note: "SSR/SSG, erişilebilirlik, incremental enhancements."
+      note: "SSR/SSG, erişilebilirlik ve kademeli iyileştirmeler."
     },
     {
-      area: "Backend",
+      area: "Sunucu tarafı",
       items: ["Node.js 20", "Python (FastAPI)", "GraphQL", "tRPC", "WebSockets/SSE"],
       note: "API-first mimari, tip güvenliği, gerçek zamanlılık."
     },
     {
-      area: "Data & Storage",
+      area: "Veri & Depolama",
       items: ["PostgreSQL 16", "Redis", "Drizzle/Prisma", "S3/R2"],
       note: "Migrasyonlar, seed, çok kiracılı şema stratejileri."
     },
     {
-      area: "Mobile",
+      area: "Mobil",
       items: ["SwiftUI", "Kotlin Compose", "React Native", "Push Notifications"],
-      note: "Native UX, güvenli oturum, crashlytics."
+      note: "Yerel deneyim, güvenli oturum ve crash raporları."
     },
     {
-      area: "DevOps & Cloud",
+      area: "DevOps & Bulut",
       items: ["Docker", "Kubernetes", "GitHub Actions", "AWS/GCP/Azure", "Vercel", "Cloudflare"],
-      note: "Preview apps, blue/green, gözlemlenebilirlik."
+      note: "Önizleme ortamları, blue/green dağıtımlar ve gözlemlenebilirlik."
     },
     {
-      area: "Quality",
+      area: "Kalite & Test",
       items: ["Playwright", "Vitest", "ESLint/Prettier", "OpenTelemetry", "Sentry"],
-      note: "E2E/visual test, tracing, hata bütçeleri."
+      note: "Uçtan uca/görsel testler, izleme ve hata bütçeleri."
     }
   ],
 
   // Fiyatları gizli tutuyoruz: "Custom quote"
   pricing: [
     {
-      plan: "Discovery Sprint",
-      price: "Custom quote",
-      bestFor: "Great to start",
-      features: ["Goals & scope", "UX flows + API contracts", "Roadmap & timeline"],
-      cta: "Request Quote"
+      plan: "Keşif Sprinti",
+      price: "Proje bazlı teklif",
+      bestFor: "En hızlı başlangıç",
+      features: ["Hedef ve kapsam analizi", "UX akışları + API sözleşmeleri", "Yol haritası ve takvim"],
+      cta: "Teklif İste"
     },
     {
-      plan: "Fixed-Price MVP",
-      price: "Custom quote",
-      bestFor: "Ship fast",
-      features: ["Scoped features", "Weekly demos", "Launch support"],
-      cta: "Request Quote"
+      plan: "Sabit Fiyatlı MVP",
+      price: "Proje bazlı teklif",
+      bestFor: "8-10 haftada lansman",
+      features: ["Netleştirilmiş kapsam", "Haftalık demo ve raporlar", "Lansman desteği"],
+      cta: "Teklif İste"
     },
     {
-      plan: "Dedicated Squad",
-      price: "Custom quote",
-      bestFor: "Scale",
-      features: ["Full-time engineers", "Flexible backlog", "SLAs & on-call"],
-      cta: "Request Quote"
+      plan: "Adanmış Ekip",
+      price: "Aylık abonelik",
+      bestFor: "Sürekli geliştirme",
+      features: ["Tam zamanlı mühendisler", "Esnek backlog", "SLA'lar ve nöbet"],
+      cta: "Teklif İste"
     }
   ],
 
@@ -158,23 +158,23 @@ const D = {
   // Blog: tarihleri ISO veya YYYY-MM-DD tut
   blog: [
     {
-      title: "Shipping an MVP in 8 Weeks: What We Cut, What We Kept",
+      title: "8 Haftada MVP: Neleri Sadeleştirdik?",
       date: "2025-07-29",
-      excerpt: "Scope slicing, release cadence ve doğru metriklerle MVP’yi 8 haftada yayına alma deneyimi.",
-      tags: ["Delivery", "MVP"],
+      excerpt: "Kapsam kırpma, yayın ritmi ve metrik takipleriyle MVP’yi 8 haftada yayına alma deneyimi.",
+      tags: ["Teslimat", "MVP"],
       url: "#"
     },
     {
-      title: "From Playwright to Stable E2E",
+      title: "Playwright ile Stabil E2E",
       date: "2025-05-18",
-      excerpt: "Flaky test’leri azaltmak: network stubbing, test IDs, trace viewer ve CI stratejileri.",
-      tags: ["Testing"],
+      excerpt: "Flaky test’leri azaltmak için network stubbing, test ID'leri, trace viewer ve CI stratejileri.",
+      tags: ["Test"],
       url: "#"
     },
     {
-      title: "Infra as Code for Small Teams",
+      title: "Küçük Takımlarda IaC",
       date: "2025-03-06",
-      excerpt: "Terraform modülleri ve GitHub Actions ile preview ortamları.",
+      excerpt: "Terraform modülleri ve GitHub Actions ile hızlı preview ortamları kurma yöntemlerimiz.",
       tags: ["DevOps"],
       url: "#"
     }
@@ -183,29 +183,29 @@ const D = {
   // SSS içeriği: EN/TR çeviriler zaten script’te TALL ile geliyor
   faq: [
     {
-      q: "Do you take maintenance work?",
-      a: "Yes. We handle ongoing improvements, bug fixes, and performance work alongside new features."
+      q: "Bakım ve geliştirme işlerini üstleniyor musunuz?",
+      a: "Evet. Mevcut sistemler için yeni özellik, hata düzeltme ve performans iyileştirmelerini düzenli olarak üstleniyoruz."
     },
     {
-      q: "How do we start fastest?",
-      a: "A 1–2 week Discovery Sprint. We align goals, define the MVP, and provide timeline/cost with clickable UX flows."
+      q: "En hızlı nasıl başlayabiliriz?",
+      a: "1-2 haftalık Keşif Sprinti ile hedefleri netleştirip MVP kapsamını çıkarıyor, zaman ve maliyet tahminini etkileşimli akışlarla sunuyoruz."
     },
     {
-      q: "What stacks do you support?",
-      a: "HTML/CSS/JS for FE; Node/Express or Python/FastAPI for APIs; Postgres/Redis/S3; plus iOS (Swift) and Android (Kotlin)."
+      q: "Hangi teknolojileri destekliyorsunuz?",
+      a: "Önyüzde HTML/CSS/JS ve modern framework'ler; backend'de Node/FastAPI; veride Postgres, Redis, S3; mobilde Swift ve Kotlin."
     },
     {
-      q: "Do you offer SLAs?",
-      a: "On dedicated squads we provide SLAs, on-call coverage, and incident response playbooks."
+      q: "SLA sunuyor musunuz?",
+      a: "Adanmış ekip modelinde SLA, nöbet ve olay müdahale planlarını birlikte sağlıyoruz."
     }
   ]
 };
 /* ======== /REAL(ISTIC) DATA ======== */
 
 const TALL = {
-  en:{ nav:{metrics:"Metrics",clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Get in touch"},
-       hero:{kicker:"Design • Build • Launch",titlePrefix:"Full-Stack",titleGradient:"Web",titleSuffix:"Mobile & Backend",lead:"We’re a growing product team delivering end-to-end software — modern websites, iOS/Android apps, and reliable backends with clean APIs.",cta1:"Start a Project",cta2:"See Projects"},
-       sections:{metrics:"Proof we deliver",servicesTitle:"Local Business Services",servicesSub:"Digital solutions tailored for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Tell us about your web, mobile, or backend needs. We’ll reply fast.",blog:"Blog & Updates"},
+  en:{ nav:{metrics:"Metrics",clients:"Clients",projects:"Projects",stack:"Tech Stack",pricing:"Pricing",faq:"FAQ",contact:"Contact Us"},
+       hero:{kicker:"Design • Build • Launch",titlePrefix:"Digital solutions",titleGradient:"for",titleSuffix:"local businesses",lead:"We help cafes and neighborhood retailers launch fast websites, mobile apps, QR menus, and POS integrations with one dedicated team.",cta1:"Request a Quote",cta2:"View Projects"},
+       sections:{metrics:"Proof we deliver",servicesTitle:"Local Business Services",servicesSub:"Tailored digital products for cafes, restaurants, and neighborhood retailers.",clients:"Clients",projects:"Selected Projects",stackTitle:"Tech we use",stackSub:"Modern, proven, maintainable — without vendor lock-in.",pricing:"Engagement Models",testimonials:"What partners say",faq:"FAQ",contactTitle:"Let’s build together",contactSub:"Share your web, mobile, or POS plans and we’ll reply within a day.",blog:"Blog & Updates"},
        services:{
          mobileTitle:"Mobile Apps",
          mobileDesc:"iOS & Android apps that keep local customers coming back.",
@@ -238,11 +238,13 @@ const TALL = {
          supportLi2:"Performance, security, and backup checks",
          supportLi3:"24/7 support plans with SLAs"
        },
-       form:{name:"Your name",email:"Email",company:"Company (optional)",message:"Your project / idea",send:"Send",sending:"Sending...",thanks:"Thanks! We will get back to you shortly."},
-       pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}] },
-  tr:{ nav:{metrics:"Metri̇kler",clients:"Müşteriler",projects:"Projeler",stack:"Teknoloji",pricing:"Fiyatlandırma",faq:"SSS",contact:"İletişim"},
-       hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Tam Yığın",titleGradient:"Web",titleSuffix:"Mobil & Backend",lead:"Modern web siteleri, iOS/Android uygulamaları ve güvenilir API’lerle uçtan uca yazılım geliştiriyoruz.",cta1:"Proje Başlat",cta2:"Projeleri Gör"},
-       sections:{metrics:"Teslim gücümüz",servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya backend ihtiyacınızı anlatın. Hızlı dönüş yaparız.",blog:"Blog & Güncellemeler"},
+       form:{name:"Your name",email:"Email",company:"Company (optional)",message:"Project or idea",send:"Send",sending:"Sending...",thanks:"Thanks! We will get back to you shortly."},
+       pricingCtas:[{label:"Request Quote"},{label:"Request Quote"},{label:"Request Quote"}],
+       blogRead:"Read"
+     },
+  tr:{ nav:{metrics:"Metrikler",clients:"Müşteriler",projects:"Projeler",stack:"Teknolojiler",pricing:"Fiyatlandırma",faq:"SSS",contact:"Hemen İletişim"},
+       hero:{kicker:"Tasarım • Geliştir • Yayına Al",titlePrefix:"Yerel işletmelere",titleGradient:"özel",titleSuffix:"dijital çözümler",lead:"Bursa ve çevresindeki kafe, restoran ve işletmeler için web sitesi, mobil uygulama, QR menü ve POS yazılımlarını tek ekipten sunuyoruz.",cta1:"Teklif Alın",cta2:"Projelerimizi Görün"},
+       sections:{metrics:"Teslim gücümüz",servicesTitle:"Hizmetlerimiz",servicesSub:"Kafe, restoran ve yerel işletmelere özel dijital çözümler sunuyoruz.",clients:"Müşteriler",projects:"Seçili Projeler",stackTitle:"Kullandığımız Teknolojiler",stackSub:"Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.",pricing:"Çalışma Modelleri",testimonials:"İş ortaklarımız ne diyor",faq:"SSS",contactTitle:"Birlikte geliştirelim",contactSub:"Web, mobil veya POS ihtiyaçlarınızı anlatın; aynı gün dönüş yapalım.",blog:"Blog & Güncellemeler"},
        services:{
          mobileTitle:"Mobil Uygulama",
          mobileDesc:"Mahallenizdeki müşterilere doğrudan ulaşan iOS & Android uygulamaları.",
@@ -275,10 +277,12 @@ const TALL = {
          supportLi2:"Performans, güvenlik ve yedekleme kontrolleri",
          supportLi3:"7/24 destek ve SLA seçenekleri"
        },
-       form:{name:"Adınız",email:"E-posta",company:"Şirket (opsiyonel)",message:"Proje/İdea",send:"Gönder",sending:"Gönderiliyor...",thanks:"Teşekkürler! En kısa sürede dönüş yapacağız."},
-       pricingCtas:[{label:"Teklif İste"},{label:"Teklif İste"},{label:"Teklif İste"}] }
+       form:{name:"Adınız",email:"E-posta",company:"Şirket (opsiyonel)",message:"Proje/Fikir",send:"Gönder",sending:"Gönderiliyor...",thanks:"Teşekkürler! En kısa sürede dönüş yapacağız."},
+       pricingCtas:[{label:"Teklif İste"},{label:"Teklif İste"},{label:"Teklif İste"}],
+       blogRead:"Oku"
+     }
 };
-let LANG = LS.get(LANG_KEY,'en');
+let LANG = LS.get(LANG_KEY,'tr');
 
 /* contact info */
 (function(){
@@ -340,7 +344,7 @@ function renderPricing(lang){
       <h3>${esc(p.plan)}</h3>
       <div class="price">${esc(p.price)}</div>
       <ul class="list">${(p.features||[]).map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
-      <a href="#contact" class="btn btn-primary" style="margin-top:10px">${esc(tp[i]?.label || p.cta || 'Contact')}</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top:10px">${esc(tp[i]?.label || p.cta || (LANG==='tr'?'İletişim':'Contact'))}</a>
     </article>`).join('');
 }
 function renderTestimonials(){
@@ -353,13 +357,14 @@ function renderTestimonials(){
 }
 function renderBlog(){
   const el=$('blogGrid'); if(!el) return;
+  const readLabel=(TALL[LANG]?.blogRead)||'Oku';
   el.innerHTML=(D.blog||[]).map(b=>`
     <article class="proj reveal">
       <h4>${esc(b.title)}</h4>
       <p class="muted" style="margin:.2rem 0">${esc(b.date)}</p>
       <p>${esc(b.excerpt)}</p>
       <div class="tags">${(b.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
-      <div style="margin-top:10px"><a href="${b.url}" class="btn">Read</a></div>
+      <div style="margin-top:10px"><a href="${b.url}" class="btn">${esc(readLabel)}</a></div>
     </article>`).join('');
 }
 function renderFAQ(){
@@ -423,6 +428,7 @@ function applyI18n(lang){
   $('inputName').placeholder=F.name; $('inputEmail').placeholder=F.email; $('inputCompany').placeholder=F.company; $('inputMessage').placeholder=F.message; $('btnSend').textContent=F.send;
 
   renderPricing(lang);
+  renderBlog();
 }
 
 /* initial render + reveal */
@@ -437,7 +443,15 @@ function initialRender(){
 }
 
 /* language + palette */
-function setLang(lang){ LANG=lang; LS.set(LANG_KEY,lang); applyI18n(lang); document.documentElement.setAttribute('lang',lang); }
+function setLang(lang){
+  LANG=lang;
+  LS.set(LANG_KEY,lang);
+  applyI18n(lang);
+  document.documentElement.setAttribute('lang',lang);
+  const btnEN=$('langEN'), btnTR=$('langTR');
+  if(btnEN) btnEN.setAttribute('aria-pressed', lang==='en'?'true':'false');
+  if(btnTR) btnTR.setAttribute('aria-pressed', lang==='tr'?'true':'false');
+}
 $('langEN')?.addEventListener('click',()=>setLang('en'));
 $('langTR')?.addEventListener('click',()=>setLang('tr'));
 setLang(LANG);
