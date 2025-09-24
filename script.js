@@ -106,7 +106,7 @@ const D = {
   pricing: [
     {
       plan: "QR Menü Starter",
-      price: "Başlangıç 2.900₺",
+      price: "Başlangıç 18.000₺",
       bestFor: "Kafeler & restoranlar",
       features: ["Sınırsız kategori ve ürün", "Her masa için QR", "Günlük menü ve kampanya alanı"],
       cta: "Teklif İste"
