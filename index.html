@@ -189,14 +189,34 @@
 
       <div class="filterbar" id="projFilter" role="group" aria-label="Projeleri filtrele">
         <button class="chip is-active" data-tag="all">Tümü</button>
-        <button class="chip" data-tag="HTML/CSS/JS">HTML/CSS/JS</button>
-        <button class="chip" data-tag="Node">Node</button>
-        <button class="chip" data-tag="Postgres">Postgres</button>
-        <button class="chip" data-tag="Swift">Swift</button>
-        <button class="chip" data-tag="Kotlin">Kotlin</button>
+        <button class="chip" data-tag="QR">QR</button>
+        <button class="chip" data-tag="Web">Web</button>
+        <button class="chip" data-tag="POS">POS</button>
+        <button class="chip" data-tag="Mobil">Mobil</button>
       </div>
 
-      <div id="projectsGrid" class="proj-grid"></div>
+      <div id="projectsGrid" class="proj-grid">
+        <article class="proj">
+          <h4>Kahve Durağı QR Menü Platformu</h4>
+          <p>Her masa için benzersiz QR, fotoğraflı menü yönetimi ve günlük kampanya duyuruları.</p>
+          <div class="tags"><span>QR</span><span>Menu</span><span>Kafe</span></div>
+        </article>
+        <article class="proj">
+          <h4>Bursa Kebap Evi Web Sitesi</h4>
+          <p>SEO uyumlu vitrin, rezervasyon &amp; paket servis formları, Google Business senkronizasyonu.</p>
+          <div class="tags"><span>Web</span><span>SEO</span><span>Rezervasyon</span></div>
+        </article>
+        <article class="proj">
+          <h4>Meyra Pastaneleri POS Entegrasyonu</h4>
+          <p>Stok-satış raporları, Yemeksepeti/Getir entegrasyonları ve günlük kasa kapanışı otomasyonu.</p>
+          <div class="tags"><span>POS</span><span>Entegrasyon</span><span>Rapor</span></div>
+        </article>
+        <article class="proj">
+          <h4>Granola Cafe Sadakat Uygulaması</h4>
+          <p>iOS/Android uygulamasıyla puan toplama, push kampanyaları ve teslimat takibi.</p>
+          <div class="tags"><span>Mobil</span><span>Sadakat</span><span>Push</span></div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -204,16 +224,72 @@
   <section id="stack" class="section" role="region" aria-label="Teknoloji yığını">
     <div class="container">
       <h2 class="section-title" id="titleStack">Kullandığımız teknolojiler</h2>
-      <p class="section-sub" id="subStack">Modern, kanıtlanmış ve sürdürülebilir — vendor bağımsız.</p>
-      <div id="stackGrid" class="stack-grid"></div>
+      <p class="section-sub" id="subStack">Hızlı, güvenilir ve yerel ihtiyaçlara uygun araçlar.</p>
+      <div id="stackGrid" class="stack-grid">
+        <article class="card">
+          <div class="stack-head">
+            <h3>Önyüz</h3>
+            <div class="chips"><span class="pill">Next.js</span><span class="pill">React</span><span class="pill">Tailwind</span><span class="pill">Astro</span><span class="pill">Alpine.js</span></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Hızlı açılan, SEO dostu ve çok dilli web siteleri.</p>
+        </article>
+        <article class="card">
+          <div class="stack-head">
+            <h3>Sunucu Tarafı</h3>
+            <div class="chips"><span class="pill">Node.js</span><span class="pill">FastAPI</span><span class="pill">tRPC</span><span class="pill">Directus</span><span class="pill">Hasura</span></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Sipariş, rezervasyon ve stok yönetimi için güvenilir API'ler.</p>
+        </article>
+        <article class="card">
+          <div class="stack-head">
+            <h3>Veri &amp; Raporlama</h3>
+            <div class="chips"><span class="pill">PostgreSQL</span><span class="pill">Supabase</span><span class="pill">Firebase</span><span class="pill">Metabase</span><span class="pill">PowerBI</span></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Şube bazlı satış raporları ve gerçek zamanlı dashboard'lar.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- Pricing -->
   <section id="pricing" class="section alt" role="region" aria-label="Çalışma modelleri">
     <div class="container">
-      <h2 class="section-title" id="titlePricing">Çalışma Modelleri</h2>
-      <div id="pricingGrid" class="cards three"></div>
+      <h2 class="section-title" id="titlePricing">Paketler</h2>
+      <div id="pricingGrid" class="cards three">
+        <article class="card center">
+          <div class="badge" style="display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:var(--micro);font-size:12px">Kafeler &amp; restoranlar</div>
+          <h3>QR Menü Starter</h3>
+          <div class="price">Başlangıç 2.900₺</div>
+          <ul class="list">
+            <li>Sınırsız kategori ve ürün</li>
+            <li>Her masa için QR</li>
+            <li>Günlük menü ve kampanya alanı</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:10px">Teklif İste</a>
+        </article>
+        <article class="card center">
+          <div class="badge" style="display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:var(--micro);font-size:12px">Yerel işletme vitrinleri</div>
+          <h3>Web Site Express</h3>
+          <div class="price">4 haftada teslim</div>
+          <ul class="list">
+            <li>SEO uyumlu tek sayfa</li>
+            <li>Rezervasyon/iletişim formları</li>
+            <li>Google Business entegrasyonu</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:10px">Teklif İste</a>
+        </article>
+        <article class="card center">
+          <div class="badge" style="display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:var(--micro);font-size:12px">Şube ve franchise</div>
+          <h3>POS &amp; Entegrasyon Paketi</h3>
+          <div class="price">Aylık abonelik</div>
+          <ul class="list">
+            <li>Stok &amp; satış raporları</li>
+            <li>Yemeksepeti/Getir entegrasyonları</li>
+            <li>Özel eğitim ve onboarding</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:10px">Teklif İste</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -221,7 +297,29 @@
   <section id="blog" class="section" role="region" aria-label="Blog ve güncellemeler">
     <div class="container">
       <h2 class="section-title" id="titleBlog">Blog &amp; Güncellemeler</h2>
-      <div id="blogGrid" class="proj-grid"></div>
+      <div id="blogGrid" class="proj-grid">
+        <article class="proj">
+          <h4>QR Menünüzü 1 Günde Nasıl Güncellersiniz?</h4>
+          <p class="muted" style="margin:.2rem 0">2025-08-12</p>
+          <p>Mevsimsel ürünler, alerjen bilgisi ve kampanyaları tek panelden yönetmenin ipuçları.</p>
+          <div class="tags"><span>QR Menü</span><span>İpuçları</span></div>
+          <div style="margin-top:10px"><a href="#" class="btn">Oku</a></div>
+        </article>
+        <article class="proj">
+          <h4>Restoranlar İçin 5 Ödeme Entegrasyonu</h4>
+          <p class="muted" style="margin:.2rem 0">2025-07-01</p>
+          <p>Yemeksepeti, Getir, Trendyol ve POS cihazlarınızı aynı ekranda buluşturun.</p>
+          <div class="tags"><span>POS</span><span>Entegrasyon</span></div>
+          <div style="margin-top:10px"><a href="#" class="btn">Oku</a></div>
+        </article>
+        <article class="proj">
+          <h4>Yerel SEO ile Masanızı Doldurun</h4>
+          <p class="muted" style="margin:.2rem 0">2025-05-20</p>
+          <p>Google Business, Instagram ve web sitenizle organik rezervasyon artırma rehberi.</p>
+          <div class="tags"><span>SEO</span><span>Pazarlama</span></div>
+          <div style="margin-top:10px"><a href="#" class="btn">Oku</a></div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -229,7 +327,24 @@
   <section id="faq" class="section alt" role="region" aria-label="Sıkça sorulan sorular">
     <div class="container">
       <h2 class="section-title" id="titleFAQ">SSS</h2>
-      <div id="faqList" class="cards two"></div>
+      <div id="faqList" class="cards two">
+        <details class="card">
+          <summary><b>QR menüyü ne kadar sürede yayına alıyorsunuz?</b></summary>
+          <p class="muted">Menü içeriğiniz hazırsa aynı gün içinde yayınlıyoruz; eğitim ve tanıtım materyallerini de teslim ediyoruz.</p>
+        </details>
+        <details class="card">
+          <summary><b>Web sitemizde rezervasyon ve sipariş alabilir miyiz?</b></summary>
+          <p class="muted">Evet. Rezervasyon formu, online sipariş ve WhatsApp yönlendirmelerini aynı panelden yönetebilirsiniz.</p>
+        </details>
+        <details class="card">
+          <summary><b>POS entegrasyonlarında hangi sistemleri destekliyorsunuz?</b></summary>
+          <p class="muted">Mikro, Logo, Paraşüt gibi muhasebe yazılımlarıyla Yemeksepeti, Getir, Trendyol gibi kanalları entegre ediyoruz.</p>
+        </details>
+        <details class="card">
+          <summary><b>Destek sonrası bakım sunuyor musunuz?</b></summary>
+          <p class="muted">Aylık bakım paketiyle sürüm yükseltmeleri, yedekleme ve güvenlik kontrollerini biz üstleniyoruz.</p>
+        </details>
+      </div>
     </div>
   </section>
 

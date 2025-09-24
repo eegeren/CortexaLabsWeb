@@ -40,22 +40,22 @@ const D = {
     {
       title: "Kahve Durağı QR Menü Platformu",
       desc: "Her masa için benzersiz QR, fotoğraflı menü yönetimi ve günlük kampanya duyuruları.",
-      tags: ["QR", "Next.js", "Supabase"]
+      tags: ["QR", "Menu", "Kafe"]
     },
     {
       title: "Bursa Kebap Evi Web Sitesi",
       desc: "SEO uyumlu vitrin, rezervasyon & paket servis formları, Google Business senkronizasyonu.",
-      tags: ["SEO", "Form", "Analytics"]
+      tags: ["Web", "SEO", "Rezervasyon"]
     },
     {
       title: "Meyra Pastaneleri POS Entegrasyonu",
       desc: "Stok-satış raporları, Yemeksepeti/Getir entegrasyonları ve günlük kasa kapanışı otomasyonu.",
-      tags: ["POS", "API", "Raporlama"]
+      tags: ["POS", "Entegrasyon", "Rapor"]
     },
     {
       title: "Granola Cafe Sadakat Uygulaması",
       desc: "iOS/Android uygulamasıyla puan toplama, push kampanyaları ve teslimat takibi.",
-      tags: ["Mobil", "Push", "Firebase"]
+      tags: ["Mobil", "Sadakat", "Push"]
     }
   ],
 
@@ -260,7 +260,12 @@ let LANG = LS.get(LANG_KEY,'tr');
 /* renderers */
 function renderProjects(filter=LS.get(FILTER_KEY,'all')){
   const el=$('projectsGrid'); if(!el) return;
-  const items=D.projects.filter(p=> filter==='all' ? true : (p.tags||[]).includes(filter));
+  let items=D.projects.filter(p=> filter==='all' ? true : (p.tags||[]).includes(filter));
+  if(!items.length){
+    items=D.projects;
+    filter='all';
+    LS.set(FILTER_KEY,'all');
+  }
   el.innerHTML=items.map(p=>`
     <article class="proj reveal">
       <h4>${esc(p.title)}</h4>
